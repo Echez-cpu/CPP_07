@@ -4,13 +4,13 @@ OBJ = $(SRC:.cpp=.o)
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-all: $(NAME)
+all:	$(NAME)
 
-$(NAME): $(OBJ)
+$(NAME):	$(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 ../srcs/%.o: ../srcs/%.cpp
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC)	$(CFLAGS) -c $< -o $@
 
 clean:
 	rm -rf $(OBJ)
@@ -18,6 +18,6 @@ clean:
 fclean: clean
 	rm -rf $(NAME)
 
-re: fclean all
+re:	fclean all
 
 .PHONY: all clean fclean re
