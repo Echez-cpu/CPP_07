@@ -19,7 +19,7 @@ void squareValue(T& element) {
 }
 
 
-template <>
+template <>  // called a specialization
 void squareValue<std::string>(std::string& element) {
     element = BLUE + element + RESET;
 }
