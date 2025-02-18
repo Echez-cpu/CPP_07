@@ -1,11 +1,13 @@
-#ifndef ../includes/WHATEVER_HPP
-#define ../includes/WHATEVER_HPP
+#ifndef ../includes/whatever.hpp
+#define ../includes/whatever.hpp
 
 #include <iostream>
 
 template <typename T>
 void swap(T &a, T &b) {
-    T temp = a;
+    T temp;
+    
+    temp = a;
     a = b;
     b = temp;
 }
