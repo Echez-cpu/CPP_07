@@ -1,7 +1,7 @@
 SRC = ../srcs/main.cpp
 NAME = templates
 OBJ_DIR = obj
-OBJ = $(patsubst ./srcs/%.cpp, $(OBJ_DIR)/%.o, $(SRC))
+OBJ = $(patsubst ../srcs/%.cpp, $(OBJ_DIR)/%.o, $(SRC))
 
 all: $(NAME)
 
