@@ -1,6 +1,5 @@
 #include "../includes/inter.hpp"
 
-
 template <typename T>
 void iter(T* address, size_t len, void (*func)(T& element)) {
     for (size_t i = 0; i < len; ++i) {
@@ -20,6 +19,10 @@ void squareValue(T& element) {
 }
 
 
+template <>
+void squareValue<std::string>(std::string& element) {
+    element = "<colored> " + element + " </colored>";
+}
 
 
 int main(void) {
