@@ -29,7 +29,7 @@ T max(const T &a, const T &b) {
 }
 
 
-nt main( void ) {
+int main( void ) {
 int a = 2;
 int b = 3;
 ::swap( a, b );
