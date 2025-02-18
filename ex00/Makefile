@@ -8,7 +8,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	c++ -Wall -Wextra -Werror -std=c++98 $(OBJ) -o $(NAME)
 
-$(OBJ_DIR)/%.o: ./srcs/%.cpp | $(OBJ_DIR)
+$(OBJ_DIR)/%.o: ../srcs/%.cpp | $(OBJ_DIR)
 	c++ -Wall -Wextra -Werror -std=c++98 -c $< -o $@
 
 $(OBJ_DIR):
