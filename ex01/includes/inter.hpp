@@ -6,7 +6,7 @@
 
 
 template<typename T>
-void	iter(T *address, int len, void (*func)(T& element));
+void	iter(T *address, size_t len, void (*func)(T& element));
 
 template<typename T>
 void	printValue(T& element);
