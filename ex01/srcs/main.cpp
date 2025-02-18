@@ -21,7 +21,7 @@ void squareValue(T& element) {
 
 template <>
 void squareValue<std::string>(std::string& element) {
-    element = "<colored> " + element + " </colored>";
+    element = BLUE + element + RESET;
 }
 
 
@@ -45,6 +45,8 @@ int main(void) {
     std::cout << "Array after iteration (printValue): ";
     iter(arr2, len2, printValue);
     std::cout << std::endl;
+    iter(arr2, len2, squareValue);
+    std::cout << std::endl;    
 
     return 0;
 }
