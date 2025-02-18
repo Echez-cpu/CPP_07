@@ -3,13 +3,16 @@ NAME = templates
 OBJ_DIR = obj
 OBJ = $(patsubst ../srcs/%.cpp, $(OBJ_DIR)/%.o, $(SRC))
 
+CC = c++
+CFLAGS = -Wall -Wextra -Werror -std=c++98
+
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	c++ -Wall -Wextra -Werror -std=c++98 $(OBJ) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 $(OBJ_DIR)/%.o: ../srcs/%.cpp | $(OBJ_DIR)
-	c++ -Wall -Wextra -Werror -std=c++98 -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJ_DIR):
 	mkdir -p $(OBJ_DIR)
