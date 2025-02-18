@@ -1,4 +1,4 @@
-SRC = ../srcs/main.cpp
+SRC = main.cpp
 NAME = templates
 OBJ_DIR = obj
 OBJ = $(patsubst ./srcs/%.cpp, $(OBJ_DIR)/%.o, $(SRC))
