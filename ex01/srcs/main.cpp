@@ -22,7 +22,7 @@ void squareValue(T& element) {
 
 
 
-int main() {
+int main(void) {
     
     int arr1[] = {1, 2, 3, 4, 5};
     size_t len1 = sizeof(arr1) / sizeof(arr1[0]);
