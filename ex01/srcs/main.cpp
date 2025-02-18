@@ -48,5 +48,6 @@ int main(void) {
     iter(arr2, len2, squareValue);
     std::cout << "Array after iteration (squareValue, with color): ";    
     iter(arr2, len2, printValue);
+    std::cout << std::endl;
     return 0;
 }
