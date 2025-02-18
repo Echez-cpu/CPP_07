@@ -33,7 +33,7 @@ int main() {
 
     iter(arr1, len1, squareValue);
     std::cout << "Array after iteration (squareValue): ";
-    iter(arr1, len1, print);
+    iter(arr1, len1, printValue);
     std::cout << std::endl;
 
     std::string arr2[] = {"Hello", "world", "iter"};
