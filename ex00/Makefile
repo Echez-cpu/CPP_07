@@ -1,23 +1,25 @@
 SRC = ../srcs/main.cpp
-NAME = templates
-OBJ = $(SRC:.cpp=.o)
-CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+NAME = commands
+OBJ_DIR = obj
+OBJ = $(patsubst ./srcs/%.cpp, $(OBJ_DIR)/%.o, $(SRC))
 
-all:	$(NAME)
+all: $(NAME)
 
-$(NAME):	$(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+$(NAME): $(OBJ)
+	c++ -Wall -Wextra -Werror -std=c++98 $(OBJ) -o $(NAME)
 
-../srcs/%.o: ../srcs/%.cpp
-	$(CC)	$(CFLAGS) -c $< -o $@
+$(OBJ_DIR)/%.o: ./srcs/%.cpp | $(OBJ_DIR)
+	c++ -Wall -Wextra -Werror -std=c++98 -c $< -o $@
+
+$(OBJ_DIR):
+	mkdir -p $(OBJ_DIR)
 
 clean:
-	rm -rf $(OBJ)
+	rm -rf $(OBJ_DIR)
 
 fclean: clean
 	rm -rf $(NAME)
 
-re:	fclean all
+re: fclean all
 
 .PHONY: all clean fclean re
