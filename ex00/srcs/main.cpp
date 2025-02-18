@@ -1,5 +1,5 @@
-#include "../includes/whatever.hpp"
-#include "../includes/whatever.hpp"
+#include "../includes/Whatever.hpp"
+#include "../includes/Whatever.hpp"
 
 #include <iostream>
 
