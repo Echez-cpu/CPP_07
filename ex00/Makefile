@@ -1,4 +1,4 @@
-SRC = main.cpp
+SRC = ../srcs/main.cpp
 NAME = templates
 OBJ = $(SRC:.cpp=.o)
 
