@@ -21,7 +21,7 @@ void squareValue(T& element) {
 
 template <>  // called a specialization
 void squareValue<std::string>(std::string& element) {
-    element = BLUE + element + RESET;
+    element = BLUE + element + "Evidence" + RESET;
 }
 
 
