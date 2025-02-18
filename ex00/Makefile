@@ -1,7 +1,7 @@
 SRC = ../srcs/main.cpp
 NAME = templates
 OBJ_DIR = obj
-OBJ = $(patsubst ../srcs/%.cpp, $(OBJ_DIR)/%.o, $(SRC))
+OBJ = $(patsubst ./srcs/%.cpp, $(OBJ_DIR)/%.o, $(SRC))
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
@@ -11,7 +11,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
-$(OBJ_DIR)/%.o: ../srcs/%.cpp | $(OBJ_DIR)
+$(OBJ_DIR)/%.o: ./srcs/%.cpp | $(OBJ_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJ_DIR):
