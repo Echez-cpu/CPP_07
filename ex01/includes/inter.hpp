@@ -12,7 +12,7 @@ template<typename T>
 void	printValue(T& element);
 
 template <typename T>
-void squareValue(T& element)
+void squareValue(T& element);
 
 
 #endif
