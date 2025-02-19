@@ -27,7 +27,7 @@ Array<T> &Array<T>::operator=(Array<T> const &original_copy) {
     if (this != &original_copy) {  
         delete[] this->input_array;
 
-        this->input_size = orignal_copy.input_size;
+        this->input_size = original_copy.input_size;
         if (this->input_size == 0) {
             this->input_array = NULL;
         } else {
