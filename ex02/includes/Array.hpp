@@ -29,6 +29,6 @@ class Array {
 		unsigned int	input_size;
 };
 
-#include "Array.tpp"
+#include "../srcs/Array.tpp"
 
 #endif
