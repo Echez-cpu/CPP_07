@@ -17,7 +17,7 @@ class Array {
 		Array &	operator=(Array const &original_copy);
 		T	&	operator[](int n) const;
 		T &		operator[](int n);
-		unsigned int		size() const;
+		  int		size() const;
 		
 		class OutOfBoundException : public std::exception
 		{
