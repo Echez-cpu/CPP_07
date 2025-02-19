@@ -6,31 +6,39 @@ template<typename T>
 Array<T>::Array(unsigned int n) {
 	this->input_array = new T[n];
 	for (unsigned int i = 0; i < n; i++)
-		this->input_array[n] = 0;
-	this->_size = n;
+		this->input_array[i] = T();
+	this->input_size = n;
 }
 
 template<typename T>
-Array<T>::Array(Array const &src) {
-	*this = src;
+Array<T>::Array(Array const &source) : input_array(NULL), input_size(0) {
+	*this = source;
 }
 
 template<typename T>
 Array<T>::~Array() {
-	delete [] this->_array;
+	delete [] this->input_array;
 }
 
+
+
 template<typename T>
-Array<T> &	Array<T>::operator=(Array<T> const &rSym) {
-	if (this != &rSym) {
-		delete [] this->_array;
-		this->_array = new T[rSym._size];
-		this->_size = rSym._size;
-		for (int i = 0; i < rSym._size; i++)
-			this->_array[i] = rSym._array[i];
-	}
-	return *this;
+Array<T> &Array<T>::operator=(Array<T> const &original_copy) {
+    if (this != &original_copy) {  
+        delete[] this->input_array;
+
+        this->input_size = orignal_copy.input_size;
+        if (this->input_size == 0) {
+            this->input_array = NULL;
+        } else {
+            this->input_array = new T[this->input_size];
+            for (int i = 0; i < this->input_size; i++)
+                this->input_array[i] = original_copy.input_array[i];
+        }
+    }
+    return *this;
 }
+
 
 template<typename T>
 T		Array<T>::operator[](int n) const {
