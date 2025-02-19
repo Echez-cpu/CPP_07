@@ -15,7 +15,7 @@ class Array {
 		~Array();
 
 		Array &	operator=(Array const &original_copy);
-		T	&	operator[](int n) const;
+		const T	&	operator[](int n) const;
 		T &		operator[](int n);
 		  int		size() const;
 		
