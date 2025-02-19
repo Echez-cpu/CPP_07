@@ -41,7 +41,7 @@ Array<T> &Array<T>::operator=(Array<T> const &original_copy) {
 
 
 template<typename T>
-T& 	Array<T>::operator[](int n) const {
+const T& 	Array<T>::operator[](int n) const {
     if (n < 0 || n >= this->input_size)
         throw Array::OutOfBoundException();
     return this->input_array[n];
