@@ -17,7 +17,7 @@ Array<T>::Array(Array const &source) : input_array(NULL), input_size(0) {
 
 template<typename T>
 Array<T>::~Array() {
-	delete [] this->input_array;
+	delete[] this->input_array;
 }
 
 
