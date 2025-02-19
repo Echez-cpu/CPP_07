@@ -49,5 +49,7 @@ int main(int, char**)
         numbers[i] = rand();
     }
     delete [] mirror;//
+
+    std::cout << "We got here" << std::endl; // remember to delete numbers
     return 0;
 }
