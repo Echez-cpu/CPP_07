@@ -26,7 +26,7 @@ class Array {
 		};
 	private:
 		T *	input_array;
-		int	input_size;
+		unsigned int	input_size;
 };
 
 #endif
