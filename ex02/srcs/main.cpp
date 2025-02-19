@@ -1,10 +1,6 @@
 #include <iostream>
 #include "../includes/Array.hpp"
 
-
-#include <iostream>
-#include "Array.hpp"
-
 #define RESET   "\033[0m"
 #define GREEN   "\033[32m"
 #define RED     "\033[31m"
