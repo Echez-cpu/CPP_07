@@ -65,6 +65,6 @@ const char* Array<T>::OutOfBoundException::what() const throw()
 }
 
 template<typename T>
-unsigned int		Array<T>::size() const {
+ int		Array<T>::size() const {
 	return this->input_size;
 }
