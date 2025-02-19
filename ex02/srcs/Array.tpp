@@ -41,29 +41,30 @@ Array<T> &Array<T>::operator=(Array<T> const &original_copy) {
 
 
 template<typename T>
-T		Array<T>::operator[](int n) const {
-	T	instance;
-
-	if (n > this->_size - 1)
-		throw Array::OutOfBoundException();
-	instance = this->_array[n];
-	return instance;
+T& 	Array<T>::operator[](int n) const {
+    if (n < 0 || n >= this->input_size)
+        throw Array::OutOfBoundException();
+    return this->input_array[n];
 }
+
+
 
 template<typename T>
-T &		Array<T>::operator[](int n) {
-	if (n > this->_size - 1)
-		throw Array::OutOfBoundException();
-	return this->_array[n];
+T&	 Array<T>::operator[](int n) {
+    if (n < 0 || n >= this->input_size)
+        throw Array::OutOfBoundException();
+    return this->input_array[n];
 }
 
-template <class T>
+
+
+template <class T>         // both typename T and class T do the same thing
 const char* Array<T>::OutOfBoundException::what() const throw()
 {
-	return ("Value is out of bound.");
+	return ("The index is out of bound.");
 }
 
 template<typename T>
-int		Array<T>::size() const {
-	return this->_size;
+unsigned int		Array<T>::size() const {
+	return this->input_size;
 }
