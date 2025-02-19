@@ -26,7 +26,7 @@ class Array {
 		};
 	private:
 		T *	input_array;
-		unsigned int	input_size;
+		int	input_size;
 };
 
 #include "../srcs/Array.tpp"
