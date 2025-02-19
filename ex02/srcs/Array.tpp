@@ -2,12 +2,12 @@
 template<typename T>
 Array<T>::Array() : input_array(NULL), input_size(0) {}
 
+
 template<typename T>
-Array<T>::Array(unsigned int n) {
-	this->input_array = new T[n];
-	for (unsigned int i = 0; i < n; i++)
-		this->input_array[i] = T();
-	this->input_size = n;
+Array<T>::Array(unsigned int n) : input_array(new T[n]), input_size(n) {
+    for (unsigned int i = 0; i < n; i++) {
+        this->input_array[i] = T();
+    }
 }
 
 template<typename T>
